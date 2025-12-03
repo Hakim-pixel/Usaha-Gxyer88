@@ -1,7 +1,7 @@
 "use client";
 
 export default function WhatsappBox({ product }) {
-  const adminPhone = "6281234567890"; // ganti nomor admin kamu
+  const adminPhone = "6289516409902"; // ganti nomor admin kamu
 
   const sendMessage = () => {
     const pesan = document.getElementById("pesan").value || 

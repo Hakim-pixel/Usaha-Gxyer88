@@ -7,8 +7,8 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SIKONDANG SATU DATA - Kota Serang",
-  description: "Sistem Informasi Kota Serang dalam Angka",
+  title: "Usaha Gxyer88",
+  description: "Platform Jual Beli Barang Bekas Berkualitas",
 };
 
 export default function RootLayout({ children }) {

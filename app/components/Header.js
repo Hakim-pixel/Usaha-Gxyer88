@@ -39,7 +39,7 @@ export default function Header() {
           Kebijakan
         </Link>
         <Link
-          href="https://sikondang.serangkota.go.id/api/documentation"
+          href="/"
           className="hover:text-yellow-400 transition-colors"
         >
           Doc API
