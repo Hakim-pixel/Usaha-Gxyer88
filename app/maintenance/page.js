@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function MaintenancePage() {
   return (
     <main className="min-h-screen bg-gray-100 flex flex-col items-center justify-center text-center px-6">
@@ -34,12 +36,12 @@ export default function MaintenancePage() {
       </p>
 
       {/* BACK HOME BUTTON */}
-      <a
+      <Link
         href="/"
         className="mt-8 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition shadow-md"
       >
         Kembali ke Home
-      </a>
+      </Link>
     </main>
   );
 }
