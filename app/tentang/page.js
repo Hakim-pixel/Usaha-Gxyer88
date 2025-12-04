@@ -10,10 +10,9 @@ export default function TentangPage() {
         </p>
 
         <section className="mb-6">
-          <h2 className="text-xl font-medium mb-2">Misi Kami</h2>
+          <h2 className="text-xl font-medium mb-2">Cara Berbelanja</h2>
           <p className="leading-relaxed">
-            Menyediakan platform aman dan terpercaya bagi penjual & pembeli barang preloved, dengan
-            proses yang transparan dan kualitas terjaga.
+            Buyer bisa mencari barang yang ingin dibeli,jika sudah memasuki detail Produk buyer bisa menanyakan ketersediaan produk dan lanjut ke chat WhatsApp detail jelas ingin melakukan pembayaran cod atau kerumah/toko penjual.
           </p>
         </section>
 
