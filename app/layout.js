@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-[#006BFF]`}>
+      <body className={`${inter.className} flex flex-col min-h-screen bg-[#FFFFFF]`}>
         <Header />
         {/* children adalah tempat konten utama (page.js) akan muncul */}
         {children}
