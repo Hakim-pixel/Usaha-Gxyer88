@@ -38,7 +38,7 @@ export default function MaintenancePage() {
         href="/"
         className="mt-8 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition shadow-md"
       >
-        Kembali ke Beranda
+        Kembali ke Home
       </a>
     </main>
   );
