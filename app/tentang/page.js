@@ -19,6 +19,7 @@ export default function TentangPage() {
         <section className="mb-6">
           <h2 className="text-xl font-medium mb-2">Apa yang Kami Jual</h2>
           <ul className="list-disc pl-5 space-y-1">
+            <p>Barang Bekas berkualitas layak pakai sebagai berikut:</p>
             <li>Elektronik (HP, laptop, konsol)</li>
             <li>Fashion & aksesoris (tas, sepatu, pakaian)</li>
             <li>Perlengkapan rumah & koleksi</li>
