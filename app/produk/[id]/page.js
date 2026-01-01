@@ -147,7 +147,6 @@ export default function ProductDetail() {
             </div>
 
             <WhatsappBox product={product} />
-            <LocationBox product={product} />
           </div>
         </div>
       </div>
