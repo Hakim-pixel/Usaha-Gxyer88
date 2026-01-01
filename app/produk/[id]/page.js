@@ -5,7 +5,6 @@ import { supabase } from "@/lib/supabase";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import WhatsappBox from "./WhatsappBox";
-import LocationBox from "./LocationBox";
 
 export default function ProductDetail() {
   const { id } = useParams();
