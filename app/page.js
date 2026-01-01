@@ -9,7 +9,7 @@ export default function Home() {
         {/* KIRI — JUDUL & MENU */}
         <div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-black leading-tight">
-            Usaha <span className="text-indigo-600">Gxyer88</span>
+            Usaha <span className="text-blue-400">Gxyer88</span>
           </h1>
 
           <p className="text-lg mt-4 mb-10 text-gray-800 max-w-md">

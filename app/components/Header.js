@@ -44,10 +44,12 @@ export default function Header() {
           Doc API
         </Link>
 
-        <Link href="/login">
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-md transition-colors">
-            Login
-          </button>
+        {/* LOGIN BUTTON (VALID & TANPA HYDRATION ERROR) */}
+        <Link
+          href="/login"
+          className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-md transition-colors"
+        >
+          Login
         </Link>
       </nav>
 
@@ -60,7 +62,7 @@ export default function Header() {
           {isOpen ? "✖" : "☰"}
         </button>
 
-        {/* MOBILE MENU DROPDOWN */}
+        {/* MOBILE MENU */}
         <div
           className={`
             absolute right-0 mt-3 w-56 
@@ -105,12 +107,14 @@ export default function Header() {
               Doc API
             </Link>
 
-            {/* LOGIN BUTTON - PERFECTLY SYMMETRICAL */}
-            <div className="px-4 mt-2">
-              <Link href="/login" onClick={() => setIsOpen(false)}>
-                <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-md w-full transition">
-                  Login
-                </button>
+            {/* LOGIN MOBILE — SUDAH SIMETRIS & RAPI */}
+            <div className="px-4 mt-2 mb-2">
+              <Link
+                href="/login"
+                onClick={() => setIsOpen(false)}
+                className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-md w-full block text-center transition"
+              >
+                Login
               </Link>
             </div>
 

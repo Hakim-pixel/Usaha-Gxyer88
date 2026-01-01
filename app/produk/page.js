@@ -54,15 +54,6 @@ export default function MarketplacePage() {
       {/* HEADER */}
       <div className="p-4 border-b shadow-sm bg-white sticky top-0 z-20">
         <h1 className="text-3xl font-extrabold text-gray-900">Marketplace</h1>
-
-        <div className="flex space-x-4 mt-4 overflow-x-auto no-scrollbar">
-          <button className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-semibold">
-            Untuk Anda
-          </button>
-          <button className="px-4 py-2 bg-gray-100 text-gray-800 rounded-full">
-            Jual
-          </button>
-        </div>
       </div>
 
       {/* FILTER */}
