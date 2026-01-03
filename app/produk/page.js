@@ -53,7 +53,7 @@ export default function MarketplacePage() {
 
       {/* HEADER */}
       <div className="p-4 border-b shadow-sm bg-white sticky top-0 z-20">
-        <h1 className="text-3xl font-extrabold text-gray-900">Marketplace</h1>
+        <h1 className="text-3xl font-extrabold text-gray-900">Katalog</h1>
       </div>
 
       {/* FILTER */}

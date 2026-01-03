@@ -3,6 +3,9 @@ import { useState } from "react";
 
 export default function KontakPage() {
   const [values, setValues] = useState({ name: "", email: "", message: "" });
+  const [photo, setPhoto] = useState(null);
+  const [preview, setPreview] = useState(null);
+  const [photoError, setPhotoError] = useState(null);
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -10,14 +13,50 @@ export default function KontakPage() {
     setValues((v) => ({ ...v, [e.target.name]: e.target.value }));
   }
 
+  function handlePhotoChange(e) {
+    const file = e.target.files && e.target.files[0];
+    const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+    const allowedTypes = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/jpg"];
+
+    if (file) {
+      if (!allowedTypes.includes(file.type)) {
+        setPhoto(null);
+        setPreview(null);
+        setPhotoError("Tipe file tidak didukung. Gunakan JPG/PNG/WebP/GIF.");
+        return;
+      }
+
+      if (file.size > MAX_FILE_SIZE) {
+        setPhoto(null);
+        setPreview(null);
+        setPhotoError("Ukuran file terlalu besar (maks 5MB).");
+        return;
+      }
+
+      setPhoto(file);
+      setPreview(URL.createObjectURL(file));
+      setPhotoError(null);
+    } else {
+      setPhoto(null);
+      setPreview(null);
+      setPhotoError(null);
+    }
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
 
+    // Use FormData to send optional file attachment
+    const formData = new FormData();
+    formData.append("name", values.name);
+    formData.append("email", values.email);
+    formData.append("message", values.message);
+    if (photo) formData.append("photo", photo);
+
     const res = await fetch("/api/send-email", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
+      body: formData,
     });
 
     const data = await res.json();
@@ -99,6 +138,27 @@ export default function KontakPage() {
                 placeholder="Tulis pesan Anda..."
                 required
               />
+            </div>
+
+            <div>
+              <label className="block text-xs font-medium text-gray-700">Foto (opsional)</label>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handlePhotoChange}
+                className="mt-1 w-full text-sm"
+              />
+
+              {preview && (
+                <div className="mt-2">
+                  <p className="text-xs text-gray-500">Preview:</p>
+                  <img src={preview} alt="preview" className="mt-1 max-h-40 rounded-md border" />
+                </div>
+              )}
+
+              {photoError && (
+                <p className="text-sm text-red-600 mt-2">{photoError}</p>
+              )}
             </div>
 
             <button

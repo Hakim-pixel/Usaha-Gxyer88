@@ -36,7 +36,7 @@ export default function Home() {
                   height={50}
                 />
               </div>
-              <p className="font-semibold text-black mt-2">Marketplace</p>
+              <p className="font-semibold text-black mt-2">Katalog</p>
             </Link>
 
             {/* ABOUT */}
